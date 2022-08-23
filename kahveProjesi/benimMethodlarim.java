@@ -21,42 +21,53 @@ public class benimMethodlarim {
             System.out.println("Filtre kahve hazırlanıyor. ");
         } else if (kahveTercih.equalsIgnoreCase("espresso")) {
             System.out.println("Espresso hazırlanıyor");
-        } else System.out.println("hatali tercih girdiniz");
-
+        } else {
+            System.out.println("hatali tercih girdiniz");
+            hangiKahve();
+        }
     }
 
-    public  static void sut(){
+    public  static void sut() {
         System.out.println("Süt eklememizi ister misiniz ? (Evet veya Hayır olarak cevaplayınız");
-        String sut=scan.next();
-        if(sut.equalsIgnoreCase("evet")){
+        String sut = scan.next();
+        if (sut.equalsIgnoreCase("evet")) {
             System.out.println("sut ekleniyor");
-        }else System.out.println("sut eklenmiyor");
+        } else if (sut.equalsIgnoreCase("evet")){
+            System.out.println("sut eklenmiyor");
+        }else{
+            System.out.println("yanlis secim yaptiniz");
+        sut();
+        }
     }
 
     public static void seker(){
         System.out.println("seker istermisiniz?(Evet veya Hayır olarak cevaplayınız");
         seker=scan.next();
-        if(seker.equalsIgnoreCase("evet")){
+        if(seker.equalsIgnoreCase("evet")) {
             System.out.println("kac seker olsun");
-            sekerSayisi=scan.nextInt();
-            System.out.println(sekerSayisi +" seker ekleniyor");
-        }else System.out.println("seker eklenmiyor");
-
+            sekerSayisi = scan.nextInt();
+            System.out.println(sekerSayisi + " seker ekleniyor");
+        } else if (seker.equalsIgnoreCase("hayir")) {
+            System.out.println("seker eklenmiyor");
+        } else{ System.out.println("yanlis tercih girdiniz");
+          seker();}
 
     }
 
     public static void boyut(){
         scan.nextLine();
-        System.out.println("Hangi boyutta olsun (Büyük boy - orta boy - küçük boy olarak giriniz)");
+        System.out.println("Hangi boyutta olsun (buyuk boy - orta boy - kucuk boy olarak giriniz)");
         boyut=scan.nextLine();
-        if (boyut.equalsIgnoreCase("Büyük Boy")){
-            System.out.println("kahveniz buyuk boy haziraniyor");
+
+        if (boyut.equalsIgnoreCase("buyuk Boy")){
+            System.out.println("kahveniz buyuk boy hazirlaniyor");
         } else if (boyut.equalsIgnoreCase("orta Boy")) {
             System.out.println("kahveniz orta boy hazirlaniyor");
         } else if (boyut.equalsIgnoreCase("kucuk Boy")) {
             System.out.println("kahveniz kucuk boy hazirlaniyor");
-
-        }
+        }else {
+            System.out.println("yanlis tercih girdiniz");
+            boyut();}
     }
     public static void siparisim(){
         System.out.println(kahveTercih+" "+boyut+" hazirdir. Afiyet olsun");
