@@ -28,7 +28,7 @@ public class benimMethodlarim {
     }
 
     public  static void sut() {
-        System.out.println("Süt eklememizi ister misiniz ? (Evet veya Hayır olarak cevaplayınız");
+        System.out.println("Sut eklememizi ister misiniz ? (Evet veya Hayır olarak cevaplayınız");
         String sut = scan.next();
         if (sut.equalsIgnoreCase("evet")) {
             System.out.println("sut ekleniyor");
